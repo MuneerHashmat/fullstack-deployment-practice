@@ -7,7 +7,9 @@ function App() {
 
   useEffect(() => {
     const getTrendingContent = async () => {
-      const res = await axios.get(`/api/v1/movie/trending`);
+      const res = await axios.get(
+        `https://muneer-fullstack-deployment-practice.onrender.com/api/v1/movie/trending`
+      );
       console.log(res);
       setTrendingContent(res.data.content);
     };
